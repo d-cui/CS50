@@ -1,0 +1,38 @@
+0.  BMP - 2^24, GIF - 2^8, JPEG - 2^24, 24 bit PNG - 2^24
+1.  GIF
+2.  Lossy compression results in a loss of some image data.
+Lossy compression can result in blurring and smudging. 
+Lossless compression involves no loss of image data.
+3.  JPEG images are generally lossy-compressed.
+4.  The FAT system modifies the filename in the directory to signify that
+the file has been deleted and the directory entry can be reused.
+Then, the system moves the file's FAT clusters to the hard drive's
+list of free clusters, never touching the actual data in the process.
+5.  A user can overwrite the data in the file with random data to render
+the overwritten information irrecoverable (i.e. with ASCII NUL characters).
+6.  stdint.h is a library that contains the definitions of several
+portable integer types.
+7.  Using uint8_t, uint32_t, int32_t, and uint16_t is important when
+writing a program that will run cross-platform. The exact size of the
+type grants portability and self-documentation.
+8.  A BYTE is 1 byte, a DWORD is 4 bytes, a LONG is 4 bytes, and 
+a WORD is 2 bytes.
+9.  The first two bytes of any BMP file must be "BM".
+10. TbfSize describes the size of the image file in bytes whereas
+biSize describes the size of the BITMAPINFOHEADER structure, which is usually
+40 bytes. 
+11. If biHeight is negative, then the bitmap is a top-down device independent bitmap,
+meaning that the origin of the image is in the upper left corner.
+12. biBitCount specifies the number of bits per pixel.
+13. fopen will return NULL in copy.c:37 if "outfile" does not exist. Whenever the
+file cannot be opened for writing, fopen will return NULL. 
+14. The third parameter of fread is the number of elements to read from
+the file of a given size. We only want to read one struct at a time, so 
+the third parameter is 1.
+15. sizeof(RGBTRIPLE) is 3 bytes, so padding is assigned (4-3*3%4)%4 = 3.
+16. fseek takes parameters FILE* stream, long int offset, and int origin.
+It starts from the specified origin position in the stream and shifts the
+position indicator to a new position offset away from the origin.
+17. SEEK_CUR is a constant used in fseek to specify the origin as the 
+current position of the file pointer. 
+18. Fozzie Bear
